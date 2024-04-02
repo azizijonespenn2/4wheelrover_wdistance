@@ -6,11 +6,11 @@ basic.forever(function () {
     hummingbird.setRotationServo(FourPort.Two, -50)
     hummingbird.setRotationServo(FourPort.Four, -50)
     if (hummingbird.getSensor(SensorType.Distance, ThreePort.One) < 7) {
-        music.play(music.stringPlayable("C5 A B G A F G E ", 300), music.PlaybackMode.UntilDone)
         hummingbird.setRotationServo(FourPort.One, 0)
         hummingbird.setRotationServo(FourPort.Two, 0)
         hummingbird.setRotationServo(FourPort.Three, 0)
         hummingbird.setRotationServo(FourPort.Four, 0)
+        music.play(music.stringPlayable("C5 A B G A F G E ", 300), music.PlaybackMode.UntilDone)
         basic.pause(2000)
         hummingbird.setRotationServo(FourPort.One, -50)
         hummingbird.setRotationServo(FourPort.Three, -50)
